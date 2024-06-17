@@ -31,7 +31,7 @@ fn main() -> ! {
     log::info!("The program started");
 
     let io = Io::new(peripherals.GPIO, peripherals.IO_MUX);
-    /// If you want to use different pins, feel free to change them here
+    // If you want to use different pins, feel free to change them here
     let sclk = io.pins.gpio18;
     let serial_in = io.pins.gpio19;
     let serial_out = io.pins.gpio23;

@@ -29,7 +29,7 @@ For the sake of brevity, `esp32` has 2 `spi` interfaces available for usage in p
 - SCLK  (sclk):         GPIO18
 - CS    (cs):           GPIO5
 
-> Connect the `VCC` pin of the `sd-card module` to the 5V source. In case of 3.3V the `sd` card won't respond to any command and you will get an error `TimeoutACommand`. But actually you should check the datasheet of your `sd` card to check the appropriate voltage.
+> Connect the `VCC` pin of the `sd-card module` to the 5V source. In case of 3.3V the `sd` card won't respond to any command and you will get an error `TimeoutACommand`. But actually you should check the datasheet of your `sd-card module` to check the appropriate voltage.
 VCC   (vcc):          5V
 
 The `spi` bus can be used `exclusively` or can be shared among different devices. So, examples are implemented for both situations.

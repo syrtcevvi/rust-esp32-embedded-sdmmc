@@ -1,8 +1,8 @@
 # Esp32 and embedded-sdmmc esp-hal and esp-idf-hal examples
 
-<a href="https://docs.rs/embedded-sdmmc/0.7.0/embedded_sdmmc/"><img src="https://img.shields.io/badge/embedded_sdmmc-0.7.0-green?style=flat&link=https://docs.rs/embedded-sdmmc/0.7.0/embedded_sdmmc/" alt="embedded_sdmmc" /></a>
+<a href="https://docs.rs/embedded-sdmmc/0.8.0/embedded_sdmmc/"><img src="https://img.shields.io/badge/embedded_sdmmc-0.8.0-green?style=flat&link=https://docs.rs/embedded-sdmmc/0.8.0/embedded_sdmmc/" alt="embedded_sdmmc" /></a>
 <a href="https://docs.rs/embedded-hal-bus/0.2.0/embedded_hal_bus/"><img src="https://img.shields.io/badge/embedded--hal--bus-0.2.0-green?style=flat&link=https://docs.rs/embedded-hal-bus/0.2.0/embedded_hal_bus/" alt="embedded-hal-bus" /></a>
-<a href="https://docs.esp-rs.org/esp-hal/esp-hal/0.18.0/esp32/esp_hal/"><img src="https://img.shields.io/badge/esp--hal-0.18.0-green?style=flat&link=https://docs.esp-rs.org/esp-hal/esp-hal/0.18.0/esp32/esp_hal/" alt="esp-hal" /></a>
+<a href="https://docs.esp-rs.org/esp-hal/esp-hal/0.20.1/esp32/esp_hal/"><img src="https://img.shields.io/badge/esp--hal-0.20.1-green?style=flat&link=https://docs.esp-rs.org/esp-hal/esp-hal/0.20.1/esp32/esp_hal/" alt="esp-hal" /></a>
 <img src="https://img.shields.io/badge/esp32-purple?style=flat" alt="esp32" />
 
 Current repo contains the examples of usage of the [embedded-sdmmc](https://crates.io/crates/embedded-sdmmc) library with esp32 with `no-std` and `std` approaches. The `no-std` example is located at [/examples/esp-hal](examples/esp-hal/README.md) and the `std` one at `/examples/esp-idf-hal` *WIP*

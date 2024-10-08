@@ -4,7 +4,7 @@
 use core::cell::RefCell;
 
 use embedded_hal_bus::spi::{ExclusiveDevice, RefCellDevice};
-use embedded_sdmmc::{sdcard::DummyCsPin, SdCard};
+use embedded_sdmmc:: SdCard;
 use esp_backtrace as _;
 use esp_hal::{
     clock::ClockControl,
@@ -45,8 +45,8 @@ fn main() -> ! {
             .with_mosi(serial_out)
             .with_miso(serial_in);
 
-        let sd_spi_device = ExclusiveDevice::new(spi_driver, DummyCsPin, delay).unwrap();
-        let sd_card = SdCard::new(sd_spi_device, cs, delay);
+        let sd_spi_device = ExclusiveDevice::new(spi_driver, cs, delay).unwrap();
+        let sd_card = SdCard::new(sd_spi_device, delay);
 
         println!("Size of the sd card: {:#?}", sd_card.num_bytes().unwrap());
     } else if cfg!(feature = "shared") {
@@ -59,8 +59,8 @@ fn main() -> ! {
                 .with_miso(serial_in),
         );
 
-        let sd_spi_device = RefCellDevice::new(&spi_driver, DummyCsPin, delay).unwrap();
-        let sd_card = SdCard::new(sd_spi_device, cs, delay);
+        let sd_spi_device = RefCellDevice::new(&spi_driver, cs, delay).unwrap();
+        let sd_card = SdCard::new(sd_spi_device, delay);
 
         println!("Size of the sd card: {:#?}", sd_card.num_bytes().unwrap());
     }
